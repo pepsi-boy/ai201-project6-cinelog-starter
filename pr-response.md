@@ -99,7 +99,11 @@ Automated coverage: `pytest tests/ -v` (5 passing; `tests/test_watchlist.py` cov
 
 ## Commit history (git log --oneline)
 
-My feature commits, rebased cleanly on top of `origin/main` (`git log --oneline origin/main..HEAD`). Every message is in conventional-commit format, each is one logical change, and there are **no merge commits** (`git log --merges origin/main..HEAD` is empty):
+My feature commits, rebased cleanly on top of `origin/main`. Every message is in conventional-commit format, each is one logical change, and there are **no merge commits**:
+
+![git log --oneline](git-log.png)
+
+For reference, the feature commits (`git log --oneline origin/main..HEAD`):
 
 ```
 c82d5d2 docs: add pr-response.md with review responses and design decisions
@@ -114,5 +118,3 @@ acf655e refactor: use db.session.get instead of Query.get for film lookups
 112319c fix: correct watchlist blueprint import path in app factory
 36e2689 feat: add watchlist model and add_to_watchlist endpoint
 ```
-
-> The `docs:` commit above is the tip; after committing this file the top hash will differ by a character or two. Run `git log --oneline` for the exact final values and paste a screenshot here if your submission requires an image.
